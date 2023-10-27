@@ -2,6 +2,7 @@
 import subprocess
 import sys
 
+
 def check_factor(args):
     if len(args) != 3:
         count = 0
@@ -23,11 +24,13 @@ def check_factor(args):
 
     print(f"{num}{num1}*{num2}")
 
+
 if len(sys.argv) != 2:
     print('Usage: ./script.py <file>')
     sys.exit(1)
 else:
     with open(sys.argv[1], 'r') as file:
         for line in file:
-            result = subprocess.check_output(['factor', line.strip()]).decode('utf-8').split()
+            result = subprocess.check_output(['factor', line.strip()]
+                                             ).decode('utf-8').split()
             check_factor(result)
