@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-gcc factors.c -o o
-./o $1
+python3 ./factors.py "$@"
